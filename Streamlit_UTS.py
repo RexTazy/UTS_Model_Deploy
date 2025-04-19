@@ -71,3 +71,8 @@ if st.button("Predict"):
     # Tampilkan hasil
     st.subheader("Prediksi:")
     st.success(result)
+
+    if prediction == 1:
+        st.success("Not Canceled ✅")  # Hijau
+    else:
+        st.error("Canceled ❌") 
