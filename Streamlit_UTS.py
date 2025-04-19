@@ -66,7 +66,12 @@ if st.button("Predict"):
 
     # Prediksi
     prediction = model.predict(user_input)[0]
+    result_text = "Not Canceled ✅" if prediction == 1 else "Canceled ❌"
 
     # Tampilkan hasil
     st.subheader("Prediksi:")
-    result = st.success("Not Canceled ✅") if prediction == 1 else st.error("Canceled ❌")
+
+    if prediction == 1:
+        st.success(result_text)
+    else:
+        st.error(result_text)
