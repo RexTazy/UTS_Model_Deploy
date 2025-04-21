@@ -60,32 +60,32 @@ def fill_test_case(case_id):
         st.session_state.no_of_special_requests = 1
 
     elif case_id == 2:
-        st.session_state.no_of_adults = 1
+        st.session_state.no_of_adults = 2
         st.session_state.no_of_children = 0
-        st.session_state.no_of_weekend_nights = 0
+        st.session_state.no_of_weekend_nights = 1
         st.session_state.no_of_week_nights = 1
         st.session_state.type_of_meal_plan = 'Not Selected'
         st.session_state.required_car_parking_space = 0
-        st.session_state.room_type_reserved = 'Room Type 3'
-        st.session_state.lead_time = 10
+        st.session_state.room_type_reserved = 'Room Type 1'
+        st.session_state.lead_time = 48
         st.session_state.arrival_year = 2018
-        st.session_state.arrival_month = 12
-        st.session_state.arrival_date = 5
-        st.session_state.market_segment_type = 'Corporate'
-        st.session_state.repeated_guest = 1
-        st.session_state.no_of_previous_cancellations = 2
-        st.session_state.no_of_previous_bookings_not_canceled = 1
-        st.session_state.avg_price_per_room = 150.0
+        st.session_state.arrival_month = 4
+        st.session_state.arrival_date = 11
+        st.session_state.market_segment_type = 'Online'
+        st.session_state.repeated_guest = 0
+        st.session_state.no_of_previous_cancellations = 0
+        st.session_state.no_of_previous_bookings_not_canceled = 0
+        st.session_state.avg_price_per_room = 94.5
         st.session_state.no_of_special_requests = 0
 
 # Tombol test case
 col1, col2 = st.columns(2)
 with col1:
-    if st.button("Test Case 1"):
+    if st.button("Test Case 1: Not Canceled"):
         fill_test_case(1)
         st.rerun()
 with col2:
-    if st.button("Test Case 2"):
+    if st.button("Test Case 2: Canceled"):
         fill_test_case(2)
         st.rerun()
 
